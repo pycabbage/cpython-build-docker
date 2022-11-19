@@ -17,4 +17,4 @@ jobs:
         run: apt install build-essential cmake
       
       - name: Install zlib
-        run: . build-scripts/install-zlib.sh
+        run: . build-scripts/install_zlib.sh
