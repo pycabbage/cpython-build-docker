@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
+NAME="libffi"
 VERSION="3.4.3"
-DIRNAME="libffi-${VERSION}"
+DIRNAME="${NAME}-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
-URL="https://sourceware.org/pub/libffi/${FILENAME}"
+URL="https://sourceware.org/pub/${NAME}/${FILENAME}"
 PREFIX="${HOME}/.local"
 
 curl "${URL}" -o "${FILENAME}"

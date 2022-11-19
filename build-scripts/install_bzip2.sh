@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-NAME="zlib"
-VERSION="1.2.13"
+NAME="bzip2"
+VERSION="1.0.8"
 DIRNAME="${NAME}-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
-URL="https://zlib.net/fossils/${FILENAME}"
+URL="https://sourceware.org/pub/${NAME}/${FILENAME}"
 PREFIX="${HOME}/.local"
 
 curl "${URL}" -o "${FILENAME}"

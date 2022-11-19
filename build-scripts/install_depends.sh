@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-echo "0: ${0}"
-echo "dirname: $(dirname ${0})"
-
-DEPENDS="zlib libffi"
+DEPENDS="zlib libffi bzip2"
 
 for DEPEND in ${DEPENDS}; do
   echo "installing ${DEPEND} ..."
-  exec "$(dirname ${0})/install_${DEPEND}.sh"
+  . "$(dirname ${0})/install_${DEPEND}.sh"
 done

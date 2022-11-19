@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-NAME="zlib"
-VERSION="1.2.13"
+NAME="gdbm"
+VERSION="1.23"
 DIRNAME="${NAME}-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
-URL="https://zlib.net/fossils/${FILENAME}"
+URL="https://ftp.gnu.org/gnu/gdbm/${NAME}/${FILENAME}"
 PREFIX="${HOME}/.local"
 
 curl "${URL}" -o "${FILENAME}"
