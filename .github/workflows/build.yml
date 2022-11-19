@@ -18,3 +18,7 @@ jobs:
       
       - name: Install zlib
         run: . build-scripts/install_zlib.sh
+      - name: check depends
+        run: |
+          ls $HOME/.local/
+          ls $HOME/.local/*/

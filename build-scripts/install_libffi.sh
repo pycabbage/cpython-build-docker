@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-VERSION="1.2.13"
-DIRNAME="zlib-${VERSION}"
+VERSION="3.4.3"
+DIRNAME="libffi-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
-URL="https://zlib.net/fossils/${FILENAME}"
+URL="https://sourceware.org/pub/libffi/${FILENAME}"
 PREFIX="${HOME}/.local"
 
 curl "${URL}" -o "${FILENAME}"
