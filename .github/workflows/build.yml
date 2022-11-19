@@ -6,10 +6,15 @@ on:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Install depends
+        if: false
+        run: apt install build-essential cmake
+      
+      - name: Install zlib
+        run: . build-scripts/install-zlib.sh
