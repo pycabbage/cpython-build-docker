@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -eu
+#!/usr/bin/env bash
 
 NAME="cmake"
 VERSION="3.25.0"
@@ -10,7 +10,7 @@ PREFIX="${HOME}/.local"
 curl "${URL}" -o "${FILENAME}"
 tar zxf "${FILENAME}"
 cd "${DIRNAME}"
-./configure --prefix="${PREFIX}"
+./bootstrap --prefix="${PREFIX}"
 make -j8
 make install
 cd -

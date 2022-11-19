@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -eu
+#!/usr/bin/env bash
 
 NAME="bzip2"
 VERSION="1.0.8"

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -eu
+#!/usr/bin/env bash
 
 NAME="xz"
 VERSION="5.2.8"

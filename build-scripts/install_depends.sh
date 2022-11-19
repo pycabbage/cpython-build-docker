@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -eu
+#!/usr/bin/env bash
 
 DEPENDS="cmake zlib libffi bzip2 gdbm xz"
 GLOBAL_PREFIX="${HOME}/.local"
