@@ -13,3 +13,4 @@ cd "${DIRNAME}"
 ./configure --prefix="${PREFIX}"
 make -j8
 make install
+cd -
