@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DEPENDS="cmake zlib libffi bzip2 gdbm xz"
+DEPENDS="gdb cmake zlib libffi bzip2 gdbm xz lcov ncurses"
 GLOBAL_PREFIX="${HOME}/.local"
 LD_LIBRARY_PATH=${GLOBAL_PREFIX}/lib:${LD_LIBRARY_PATH}
 PKG_CONFIG_PATH=${GLOBAL_PREFIX}/lib/pkgconfig:${PKG_CONFIG_PATH}
