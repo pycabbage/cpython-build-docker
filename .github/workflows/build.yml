@@ -31,3 +31,5 @@ jobs:
         with:
           repository: 'python/cpython'
           path: 'cpython'
+          submodules: true
+          ref: 'v3.11.0'
