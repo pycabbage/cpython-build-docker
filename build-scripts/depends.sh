@@ -2,10 +2,11 @@
 
 set -e
 
-DEPENDS="gdb cmake readline zlib libffi bzip2 gdbm xz lcov ncurses sqlite ssl tcl tk"
+DEPENDS="make gdb cmake ninja readline zlib libffi bzip2 gdbm xz lcov ncurses sqlite ssl tcl tk ninja"
 DEPENDS_SCRIPT="$(dirname ${0})/depends"
 
-export export LD_LIBRARY_PATH=${PREFIX}/lib:${LD_LIBRARY_PATH}
+export PREFIX="${HOME}/.local"
+export LD_LIBRARY_PATH=${PREFIX}/lib:${LD_LIBRARY_PATH}
 export PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig:${PKG_CONFIG_PATH}
 export PATH=${PREFIX}/bin:${PATH}
 

@@ -14,3 +14,4 @@ cd "${DIRNAME}"
 make -j8
 make install PREFIX="${PREFIX}"
 cd -
+rm -fr "${DIRNAME}" "${FILENAME}"

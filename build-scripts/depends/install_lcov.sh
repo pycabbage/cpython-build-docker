@@ -13,3 +13,4 @@ tar zxf "${FILENAME}"
 cd "${DIRNAME}"
 make install PREFIX="${PREFIX}"
 cd -
+rm -fr "${DIRNAME}" "${FILENAME}"

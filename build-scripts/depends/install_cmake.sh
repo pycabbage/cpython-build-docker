@@ -16,3 +16,4 @@ cd "${DIRNAME}"
 make -j8
 make install
 cd -
+rm -fr "${DIRNAME}" "${FILENAME}"

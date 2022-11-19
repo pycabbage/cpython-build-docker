@@ -15,3 +15,4 @@ cd "${DIRNAME}/unix"
 make -j8
 make install
 cd -
+rm -fr "${DIRNAME}" "${FILENAME}"

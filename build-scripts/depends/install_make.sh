@@ -2,11 +2,11 @@
 
 set -e
 
-NAME="libffi"
-VERSION="3.4.3"
+NAME="make"
+VERSION="4.4"
 DIRNAME="${NAME}-${VERSION}"
-FILENAME="${DIRNAME}.tar.gz"
-URL="https://sourceware.org/pub/${NAME}/${FILENAME}"
+FILENAME="${VERSION}.tar.gz"
+URL="https://ftp.gnu.org/gnu/${NAME}/${FILENAME}"
 
 curl "${URL}" -kLo "${FILENAME}"
 tar zxf "${FILENAME}"

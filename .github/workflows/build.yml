@@ -40,6 +40,14 @@ jobs:
           source ./emsdk_env.sh
           cd -
 
+      - name: Checkout wasi-sdk
+        if: false
+        uses: actions/checkout@v3
+        with:
+          repository: 'WebAssembly/wasi-sdk'
+          path: 'wasi-sdk'
+          submodules: true
+
       - name: Checkout cpython
         if: false
         uses: actions/checkout@v3
