@@ -12,6 +12,6 @@ cd "${DIRNAME}"
 git submodule update --init --recursive --recommend-shallow --depth 1
 make package -j8
 ls dist
-make install
+make install PREFIX="${PREFIX}"
 cd -
 rm -fr "${DIRNAME}"

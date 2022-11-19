@@ -2,7 +2,8 @@
 
 set -e
 
-DEPENDS="make gdb cmake ninja readline zlib libffi bzip2 gdbm xz lcov ncurses sqlite ssl tcl tk ninja"
+DEPENDS="make cmake ninja wasi-sdk"
+# DEPENDS="make gdb cmake ninja readline zlib libffi bzip2 gdbm xz lcov ncurses sqlite ssl tcl tk wasi-sdk"
 DEPENDS_SCRIPT="$(dirname ${0})/depends"
 
 export PREFIX="${HOME}/.local"
