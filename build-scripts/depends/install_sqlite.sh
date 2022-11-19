@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-NAME="libffi"
-VERSION="3.4.3"
-DIRNAME="${NAME}-${VERSION}"
+set -e
+
+NAME="sqlite"
+VERSION="3400000"
+DIRNAME="${NAME}-autoconf-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
-URL="https://sourceware.org/pub/${NAME}/${FILENAME}"
-PREFIX="${HOME}/.local"
+URL="https://www.sqlite.org/2022/${FILENAME}"
 
 curl "${URL}" -kLo "${FILENAME}"
 tar zxf "${FILENAME}"

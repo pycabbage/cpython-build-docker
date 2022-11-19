@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-NAME="xz"
-VERSION="5.2.8"
+set -e
+
+NAME="bzip2"
+VERSION="1.0.8"
 DIRNAME="${NAME}-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
-URL="https://tukaani.org/${NAME}/${FILENAME}"
-PREFIX="${HOME}/.local"
+URL="https://sourceware.org/pub/${NAME}/${FILENAME}"
 
 curl "${URL}" -kLo "${FILENAME}"
 tar zxf "${FILENAME}"
 cd "${DIRNAME}"
-./configure --prefix="${PREFIX}"
 make -j8
-make install
+make install PREFIX="${PREFIX}"
 cd -

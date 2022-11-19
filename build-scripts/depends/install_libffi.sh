@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-NAME="gdb"
-VERSION="12.1"
+set -e
+
+NAME="libffi"
+VERSION="3.4.3"
 DIRNAME="${NAME}-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
-URL="https://ftp.gnu.org/gnu/${NAME}/${FILENAME}"
-PREFIX="${HOME}/.local"
+URL="https://sourceware.org/pub/${NAME}/${FILENAME}"
 
 curl "${URL}" -kLo "${FILENAME}"
 tar zxf "${FILENAME}"

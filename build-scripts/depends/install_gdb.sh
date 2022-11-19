@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-NAME="gdbm"
-VERSION="1.23"
+set -e
+
+NAME="gdb"
+VERSION="12.1"
 DIRNAME="${NAME}-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
 URL="https://ftp.gnu.org/gnu/${NAME}/${FILENAME}"
-PREFIX="${HOME}/.local"
 
 curl "${URL}" -kLo "${FILENAME}"
 tar zxf "${FILENAME}"

@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-NAME="ncurses"
-VERSION="6.3-20221112"
+set -e
+
+NAME="xz"
+VERSION="5.2.8"
 DIRNAME="${NAME}-${VERSION}"
-FILENAME="${NAME}.tar.gz"
-URL="https://invisible-island.net/datafiles/current/${FILENAME}"
-PREFIX="${HOME}/.local"
+FILENAME="${DIRNAME}.tar.gz"
+URL="https://tukaani.org/${NAME}/${FILENAME}"
 
 curl "${URL}" -kLo "${FILENAME}"
 tar zxf "${FILENAME}"

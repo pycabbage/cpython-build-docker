@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
 
-NAME="bzip2"
-VERSION="1.0.8"
+set -e
+
+NAME="ssl"
+VERSION="3.0.7"
 DIRNAME="${NAME}-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
-URL="https://sourceware.org/pub/${NAME}/${FILENAME}"
-PREFIX="${HOME}/.local"
+URL="https://www.openssl.org/source/${FILENAME}"
 
 curl "${URL}" -kLo "${FILENAME}"
 tar zxf "${FILENAME}"
 cd "${DIRNAME}"
+./Configure --prefix="${PREFIX}" --openssldir="${PREFIX}/ssl"
 make -j8
-make install PREFIX="${PREFIX}"
+make install
 cd -

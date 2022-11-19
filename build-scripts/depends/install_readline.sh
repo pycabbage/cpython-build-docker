@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
-NAME="zlib"
-VERSION="1.2.13"
+set -e
+
+NAME="readline"
+VERSION="8.2"
 DIRNAME="${NAME}-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
-URL="https://zlib.net/fossils/${FILENAME}"
-PREFIX="${HOME}/.local"
+URL="https://ftp.gnu.org/gnu/${NAME}/${FILENAME}"
 
 curl "${URL}" -kLo "${FILENAME}"
 tar zxf "${FILENAME}"

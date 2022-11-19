@@ -1,16 +1,17 @@
 #!/usr/bin/env bash
 
-NAME="ssl"
-VERSION="3.0.7"
+set -e
+
+NAME="gdbm"
+VERSION="1.23"
 DIRNAME="${NAME}-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
-URL="https://www.openssl.org/source/${FILENAME}"
-PREFIX="${HOME}/.local"
+URL="https://ftp.gnu.org/gnu/${NAME}/${FILENAME}"
 
 curl "${URL}" -kLo "${FILENAME}"
 tar zxf "${FILENAME}"
 cd "${DIRNAME}"
-./Configure --prefix="${PREFIX}" --openssldir="${PREFIX}/ssl"
+./configure --prefix="${PREFIX}"
 make -j8
 make install
 cd -

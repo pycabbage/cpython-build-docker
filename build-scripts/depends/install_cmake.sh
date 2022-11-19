@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 
+set -e
+
 NAME="cmake"
 VERSION="3.25.0"
 DIRNAME="${NAME}-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
 URL="https://github.com/Kitware/CMake/releases/download/v${VERSION}/${FILENAME}"
-PREFIX="${HOME}/.local"
 
 echo "Getting ${URL} ..."
 curl "${URL}" -kLo "${FILENAME}"

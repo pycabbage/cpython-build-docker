@@ -9,13 +9,12 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     if: "!contains(github.event.head_commit.message, '(noci)')"
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
 
     steps:
       - uses: actions/checkout@v3
-
-      - name: Install depends using apt
-        if: false
-        run: apt install build-essential cmake
 
       - name: Install depends
         run: ./build-scripts/depends.sh
@@ -25,3 +24,25 @@ jobs:
           ls -lh $HOME/.local/
           ls -lh $HOME/.local/*/
           ls -lh $HOME/.local/*/*/
+
+      - name: Checkout emsdk
+        if: false
+        uses: actions/checkout@v3
+        with:
+          repository: 'emscripten-core/emsdk'
+          path: 'emsdk'
+      - name: Install emsdk
+        if: false
+        run: |
+          cd emsdk
+          ./emsdk install latest
+          ./emsdk activate latest
+          source ./emsdk_env.sh
+          cd -
+
+      - name: Checkout cpython
+        if: false
+        uses: actions/checkout@v3
+        with:
+          repository: 'python/cpython'
+          path: 'cpython'
