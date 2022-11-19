@@ -1,9 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -eu
 
-DEPENDS="zlib libffi bzip2 gdbm"
+DEPENDS="cmake zlib libffi bzip2 gdbm xz"
 GLOBAL_PREFIX="${HOME}/.local"
 LD_LIBRARY_PATH=${GLOBAL_PREFIX}/lib:${LD_LIBRARY_PATH}
 PKG_CONFIG_PATH=${GLOBAL_PREFIX}/lib/pkgconfig:${PKG_CONFIG_PATH}
+PATH=${GLOBAL_PREFIX}/bin:${PATH}
 
 for DEPEND in ${DEPENDS}; do
   echo "installing ${DEPEND} ..."

@@ -1,10 +1,10 @@
 #!/usr/bin/env bash -eu
 
-NAME="gdbm"
-VERSION="1.23"
+NAME="cmake"
+VERSION="3.25.0"
 DIRNAME="${NAME}-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
-URL="https://ftp.gnu.org/gnu/${NAME}/${FILENAME}"
+URL="https://github.com/Kitware/CMake/releases/download/v${VERSION}/${FILENAME}"
 PREFIX="${HOME}/.local"
 
 curl "${URL}" -o "${FILENAME}"

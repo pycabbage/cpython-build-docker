@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -eu
 
 NAME="libffi"
 VERSION="3.4.3"

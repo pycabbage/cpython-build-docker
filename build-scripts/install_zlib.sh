@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -eu
 
 NAME="zlib"
 VERSION="1.2.13"
