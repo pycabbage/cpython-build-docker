@@ -7,7 +7,7 @@ FILENAME="${DIRNAME}.tar.gz"
 URL="https://sourceware.org/pub/${NAME}/${FILENAME}"
 PREFIX="${HOME}/.local"
 
-curl "${URL}" -o "${FILENAME}"
+curl "${URL}" -kLo "${FILENAME}"
 tar zxf "${FILENAME}"
 cd "${DIRNAME}"
 make -j8
