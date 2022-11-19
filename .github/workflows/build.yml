@@ -15,9 +15,10 @@ jobs:
       - name: Install depends
         if: false
         run: apt install build-essential cmake
-      
-      - name: Install zlib
-        run: . build-scripts/install_zlib.sh
+
+      - name: Install depends
+        run: . build-scripts/install_depends.sh
+
       - name: check depends
         run: |
           ls $HOME/.local/
