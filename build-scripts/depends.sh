@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-DEPENDS="gdb cmake readline zlib libffi bzip2 gdbm xz lcov ncurses sqlite"
-GLOBAL_PREFIX="${HOME}/.local"
-LD_LIBRARY_PATH=${GLOBAL_PREFIX}/lib:${LD_LIBRARY_PATH}
-PKG_CONFIG_PATH=${GLOBAL_PREFIX}/lib/pkgconfig:${PKG_CONFIG_PATH}
-PATH=${GLOBAL_PREFIX}/bin:${PATH}
+DEPENDS="gdb cmake readline zlib libffi bzip2 gdbm xz lcov ncurses sqlite ssl tcl tk"
+PREFIX="${HOME}/.local"
+LD_LIBRARY_PATH=${PREFIX}/lib:${LD_LIBRARY_PATH}
+PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig:${PKG_CONFIG_PATH}
+PATH=${PREFIX}/bin:${PATH}
 
 for DEPEND in ${DEPENDS}; do
   echo "installing ${DEPEND} ..."
