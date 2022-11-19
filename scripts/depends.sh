@@ -2,15 +2,17 @@
 
 set -e
 
-# DEPENDS="readline zlib libffi bzip2 xz lcov ncurses sqlite ssl tcl tk wasix"
+DEPENDS="readline zlib libffi bzip2 xz lcov ncurses sqlite ssl tcl tk wasix"
 # TOOLS="make gdb gdbm cmake ninja wasi-sdk-prebuilt emsdk"
-TOOLS="wasi-sdk-prebuilt wasix"
+TOOLS="gdb gdbm ninja wasi-sdk-prebuilt emsdk"
 DEPENDS_SCRIPT="$(dirname ${0})/depends"
 
 export PREFIX="${HOME}/.local"
-export LD_LIBRARY_PATH=${PREFIX}/lib:${LD_LIBRARY_PATH}
-export PKG_CONFIG_PATH=${PREFIX}/lib/pkgconfig:${PKG_CONFIG_PATH}
-export PATH=${PREFIX}/bin:${PREFIX}/emsdk:${PATH}
+export LD_LIBRARY_PATH=$PREFIX/lib:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH
+export WASI_SDK_PATH=$PREFIX/wasi-sdk
+export EMSDK_PATH=$PREFIX/emsdk
+export PATH=$PREFIX/bin:$EMSDK_PATH:$PATH
 
 DEPENDS="${TOOLS} ${DEPENDS}"
 for DEPEND in ${DEPENDS}; do

@@ -12,6 +12,8 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
+    env:
+      python_version: 3.11.0
 
     steps:
       - uses: actions/checkout@v3
@@ -25,11 +27,9 @@ jobs:
           ls -lh $HOME/.local/*/
           ls -lh $HOME/.local/*/*/
 
-      - name: Checkout cpython
-        if: false
-        uses: actions/checkout@v3
-        with:
-          repository: 'python/cpython'
-          path: 'cpython'
-          submodules: true
-          ref: 'v3.11.0'
+      - name: Fetch cpython source
+        id: fetch-cpython
+        run: scripts/fetch.sh $python_version
+
+      - name: Build cpython normally
+        run: scripts/build/normal.sh "${{ steps.fetch-cpython.outputs.dest }}"
