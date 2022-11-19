@@ -38,7 +38,7 @@ jobs:
     name: Build (image)
     runs-on: ubuntu-latest
     # if: "!contains(github.event.head_commit.message, '(noci)')"
-    if: never()
+    if: false
     env:
       DOCKER_BUILDKIT: 1
 
