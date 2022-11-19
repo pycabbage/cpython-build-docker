@@ -5,7 +5,7 @@ set -e
 NAME="make"
 VERSION="4.4"
 DIRNAME="${NAME}-${VERSION}"
-FILENAME="${VERSION}.tar.gz"
+FILENAME="${DIRNAME}.tar.gz"
 URL="https://ftp.gnu.org/gnu/${NAME}/${FILENAME}"
 
 curl "${URL}" -kLo "${FILENAME}"
