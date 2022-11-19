@@ -8,5 +8,6 @@ URL="https://zlib.net/fossils/${FILENAME}"
 curl "${URL}" -o "${FILENAME}"
 tar zxf "${FILENAME}"
 cd "${DIRNAME}"
+./configure 
 make -j8
 make install
