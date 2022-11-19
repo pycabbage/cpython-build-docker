@@ -4,7 +4,7 @@ set -e
 
 # DEPENDS="readline zlib libffi bzip2 gdbm xz lcov ncurses sqlite ssl tcl tk"
 # TOOLS="make gdb cmake ninja wasi-sdk emsdk"
-TOOLS="ninja wasi-sdk"
+TOOLS="wasi-sdk-prebuilt"
 DEPENDS_SCRIPT="$(dirname ${0})/depends"
 
 export PREFIX="${HOME}/.local"
