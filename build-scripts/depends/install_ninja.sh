@@ -14,9 +14,5 @@ cd "${DIRNAME}"
 cmake -Bbuild-cmake -DCMAKE_INSTALL_PREFIX="${PREFIX}"
 cmake --build build-cmake
 cmake --install build-cmake
-
-./configure --prefix="${PREFIX}"
-make -j8
-make install
 cd -
 rm -fr "${DIRNAME}" "${FILENAME}"
