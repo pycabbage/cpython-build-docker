@@ -3,9 +3,9 @@
 set -e
 
 NAME="ninja"
-VERSION="v1.11.1"
+VERSION="1.11.1"
 DIRNAME="ninja-${VERSION}"
-FILENAME="${VERSION}.tar.gz"
+FILENAME="v${VERSION}.tar.gz"
 URL="https://github.com/ninja-build/${NAME}/archive/refs/tags/${FILENAME}"
 
 curl "${URL}" -kLo "${FILENAME}"
