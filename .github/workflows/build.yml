@@ -15,12 +15,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Checkout emsdk
-        uses: actions/checkout@v3
-        with:
-          repository: 'WebAssembly/wasi-sdk'
-          path: 'wasi-sdk'
-          submodules: true
 
       - name: Install depends
         run: ./build-scripts/depends.sh
