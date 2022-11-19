@@ -4,7 +4,7 @@ set -e
 
 NAME="wasi-sdk"
 VERSION="wasi-sdk-16"
-VERSION_FULL="wasi-sdk-16"
+VERSION_FULL="wasi-sdk-16.0"
 DIRNAME="${PREFIX}/${NAME}"
 FILENAME="${VERSION_FULL}-linux.tar.gz"
 URL="https://github.com/WebAssembly/${NAME}/releases/download/${VERSION}/${FILENAME}"
