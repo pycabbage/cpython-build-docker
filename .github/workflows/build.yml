@@ -8,6 +8,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '(noci)')"
 
     steps:
       - uses: actions/checkout@v3
@@ -21,5 +22,6 @@ jobs:
 
       - name: check depends
         run: |
-          ls $HOME/.local/
-          ls $HOME/.local/*/
+          ls -lh $HOME/.local/
+          ls -lh $HOME/.local/*/
+          ls -lh $HOME/.local/*/*/

@@ -4,7 +4,7 @@ NAME="gdbm"
 VERSION="1.23"
 DIRNAME="${NAME}-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
-URL="https://ftp.gnu.org/gnu/gdbm/${NAME}/${FILENAME}"
+URL="https://ftp.gnu.org/gnu/${NAME}/${FILENAME}"
 PREFIX="${HOME}/.local"
 
 curl "${URL}" -o "${FILENAME}"

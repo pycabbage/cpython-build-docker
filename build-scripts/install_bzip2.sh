@@ -10,7 +10,6 @@ PREFIX="${HOME}/.local"
 curl "${URL}" -o "${FILENAME}"
 tar zxf "${FILENAME}"
 cd "${DIRNAME}"
-./configure --prefix="${PREFIX}"
 make -j8
-make install
+make install PREFIX="${PREFIX}"
 cd -
