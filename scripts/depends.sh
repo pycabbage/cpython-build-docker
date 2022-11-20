@@ -2,9 +2,8 @@
 
 set -e
 
-# DEPENDS="zlib libffi bzip2 xz lcov ncurses readline sqlite openssl tcl tk wasix"
-DEPENDS="tcl"
-# TOOLS="make gdb gdbm cmake ninja wasi-sdk-prebuilt emsdk"
+DEPENDS="zlib libffi bzip2 xz lcov ncurses readline sqlite openssl tcl tk wasix"
+TOOLS="make gdb gdbm cmake libtool ninja wasi-sdk-prebuilt emsdk"
 # TOOLS="gdb gdbm libtool ninja wasi-sdk-prebuilt emsdk"
 DEPENDS_SCRIPT="$(dirname ${0})/depends"
 

@@ -4,8 +4,8 @@ set -e
 
 NAME="tk"
 VERSION="8.6.12"
-DIRNAME="${NAME}${VERSION}-src"
-FILENAME="${DIRNAME}.tar.gz"
+DIRNAME="${NAME}${VERSION}"
+FILENAME="${DIRNAME}-src.tar.gz"
 URL="https://downloads.sourceforge.net/project/tcl/Tcl/${VERSION}/${FILENAME}"
 
 curl "${URL}" -kLo "${FILENAME}"
