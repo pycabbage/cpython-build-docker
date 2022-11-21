@@ -11,8 +11,8 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
   --mount=type=cache,target=/var/lib/apt,sharing=locked \
   apt install --no-install-recommends -y curl tar xz-utils build-essential cmake
 
-COPY ./build/entrypoint.sh /entrypoint.sh
-COPY ./scripts ${BASE}
+# COPY ./build/entrypoint.sh /entrypoint.sh
+COPY ../scripts ${BASE}
 
 ENV PATH=${BASE}/bin:${PATH}
 RUN ls ${BASE} -lh -a
