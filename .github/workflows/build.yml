@@ -56,6 +56,9 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ github.token }}
+      - name: Image Name
+        id: imagename
+        run: echo "name=ghcr.io/${GITHUB_REPOSITORY,,}/base" >> $GITHUB_OUTPUT
       - name: Build (image)
         uses: docker/build-push-action@v3
         with:
