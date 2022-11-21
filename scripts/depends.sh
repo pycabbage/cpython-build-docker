@@ -7,12 +7,7 @@ TOOLS="make gdb gdbm cmake libtool ninja wasi-sdk-prebuilt emsdk"
 # TOOLS="gdb gdbm libtool ninja wasi-sdk-prebuilt emsdk"
 DEPENDS_SCRIPT="$(dirname ${0})/depends"
 
-export PREFIX="${HOME}/.local"
-export LD_LIBRARY_PATH=$PREFIX/lib:$LD_LIBRARY_PATH
-export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH
-export WASI_SDK_PATH=$PREFIX/wasi-sdk
-export EMSDK_PATH=$PREFIX/emsdk
-export PATH=$PREFIX/bin:$EMSDK_PATH:$PATH
+. ./env.sh
 
 DEPENDS="${TOOLS} ${DEPENDS}"
 for DEPEND in ${DEPENDS}; do

@@ -11,7 +11,7 @@ URL="https://www.openssl.org/source/${FILENAME}"
 curl "${URL}" -kLo "${FILENAME}"
 tar zxf "${FILENAME}"
 cd "${DIRNAME}"
-./Configure --prefix="${PREFIX}" --openssldir="${PREFIX}/ssl" shared zlib-dynamic
+./Configure --prefix="${PREFIX}" --openssldir="${PREFIX}/ssl" # shared zlib
 make -j8
 make install
 cd -

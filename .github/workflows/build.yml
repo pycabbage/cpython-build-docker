@@ -8,7 +8,8 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '(noci)')"
+    if: false
+    # if: "!contains(github.event.head_commit.message, '(noci)')"
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
@@ -37,8 +38,8 @@ jobs:
   build-image:
     name: Build (image)
     runs-on: ubuntu-latest
-    # if: "!contains(github.event.head_commit.message, '(noci)')"
-    if: false
+    if: "!contains(github.event.head_commit.message, '(noci)')"
+    # if: false
     env:
       DOCKER_BUILDKIT: 1
 
@@ -58,7 +59,7 @@ jobs:
       - name: Build (image)
         uses: docker/build-push-action@v3
         with:
-          context: images/base
+          context: build
           pull: true
           push: true
           tags: ${{ steps.imagename.outputs.name }}:latest

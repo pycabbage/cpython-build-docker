@@ -2,16 +2,16 @@
 
 set -e
 
-NAME="zlib"
-VERSION="1.2.13"
+NAME="m4"
+VERSION="1.4.19"
 DIRNAME="${NAME}-${VERSION}"
 FILENAME="${DIRNAME}.tar.gz"
-URL="https://zlib.net/fossils/${FILENAME}"
+URL="https://ftp.gnu.org/gnu/${NAME}/${FILENAME}"
 
 curl "${URL}" -kLo "${FILENAME}"
 tar zxf "${FILENAME}"
 cd "${DIRNAME}"
-./configure --prefix="${PREFIX}" --libdir="${PREFIX}/lib" --includedir="${PREFIX}/include" --64 --const --static
+./configure --prefix="${PREFIX}"
 make -j8
 make install
 cd -
